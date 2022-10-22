@@ -4,48 +4,61 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
-
+/**
+ * class Scarecrow is initializing the different parts that will be used
+ * to assemble the scarecrow below.
+ * 
+ */
 class Scarecrow {
-
-    /* Parts of the Scarecrow
-     * TODO: Uncomment remaining parts as you implement each class
-     */
     private Pumpkin head;
-    // private Shirt body;
-    // private Pants legs;
-    // private Hat hat;
-    // private Boot leftFoot;
-    // private Boot rightFoot;
-    // private Banner sign;
-    private String message;
-
-    /* Constructor
-     * TODO: initialize remaining parts
-     */
-    public Scarecrow(Pumpkin h) {
+        private Shirt body;
+        private Pants legs;
+        private Boot leftFoot;
+        private Boot rightFoot;
+        
+    
+/**
+ * this will allow us to use them later on
+ * @param h
+ * @param s
+ * @param p
+ * @param l
+ * @param r
+ */
+    public Scarecrow(Pumpkin h, Shirt s, Pants p, Boot l, Boot r) {
         head = h;
+        body = s;
+        legs = p;
+        leftFoot = l;
+        rightFoot = r;
+        
+        
     }
 
-    /* Displays the Scarecrow 
-     * TODO: call the .display() method of each part... 
-     *       ...in the right order!
-    */
-    public void display() {
+
+    public void display() { 
         head.display();
+        body.display();
+        legs.display();
+        leftFoot.display();
+        rightFoot.display();
+          
     }
 
     /* Main method (for testing) */
     public static void main(String[] args) {
-
-        // TODO: Don't forget to update the line below if you modify the constructor
-        Scarecrow myScarecrow = new Scarecrow(new Pumpkin());
-
-        // If a message was passed in on the command line, extract and store it
-        // TODO: in Step 4, you'll pass this value along to your Banner constructor
+        
+        String message;
         if (args.length > 0) {
-            myScarecrow.message = args[0];
+            message = args[0];
+        } else {
+            message = "Happy fall, everyone!";
         }
+        Banner myBanner = new Banner(message);
+        myBanner.display();
 
+
+        Scarecrow myScarecrow = new Scarecrow(new Pumpkin(), new Shirt(), new Pants(), new Boot("Left"), new Boot("Right"));
         myScarecrow.display();
     }
 

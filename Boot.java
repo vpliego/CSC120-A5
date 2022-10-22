@@ -8,21 +8,31 @@ public class Boot {
   
     private String direction;
   
-    /* Constructor */
+/**
+ * will take in the string direction without being case sensitive
+ * @param direction
+ * @returns direction of boot in lowercase so that it can then be passed below
+ * and in Scarecrow.java.
+ */
     public Boot(String direction) {
         this.direction = direction.toLowerCase();
     }
 
-    /*
-     * TODO: Modify this method to print ASCII Art Boot
-     */
+
     public void display() {
         if (this.direction.equals("left")) {
-          System.out.println("Left boot?");
+          System.out.print("     |______| ");
+
+
+
+
+
         } else if (this.direction.equals("right")) {
-          System.out.println("Right boot?");
+          System.out.println("       |______| ");
+          //System.out.println("Right boot?");
         } else {
           System.out.println("Which boot?");
+
         }
     }
 

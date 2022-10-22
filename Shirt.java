@@ -4,13 +4,22 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
-public class Shirt {
+/**
+ * class Shirt will allow us to draw our ASCII art for the shirt portion
+ * of the scarecrow. It will be called in the Scarecrow.java file. 
+ */
+ public class Shirt {
 
-    /*
-     * TODO: Modify this method to print ASCII Art Shirt
-     */
+    
     public void display() {
-        System.out.println("Shirt?);
+        System.out.println("      ~~~~~~~~~~~~~~~~~~~~~   ");
+        System.out.println("    /                       \\");
+        System.out.println("   /      |           |      \\");
+        System.out.println("   ______/|           |\\______");
+        System.out.println("  /  /    |           |   \\  \\");
+        System.out.println(" /  /      ~~~~~~~~~~~     \\  \\ ");
+        System.out.println(" www       \\    o    /      www ");
+
     }
 
     /* main method (for testing) */
